@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+
+  research-analytics:
+
+    build: .
+
+    container_name: vanlang_analysis_01
+
+    ports:
+      - "5001:5001"
+
+    restart: unless-stopped

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Graph Visualizer</title>
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/collaboration.css') }}">
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/header.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<div>
+    {% include 'header.html' %}
+    <div class="collaboration-page">   
+        <div class="graph-container">
+            <div class="filter-bar">
+                <div class="filters-left">
+                    <div class="custom-dropdown" id="dropdown-year">
+                        <div class="dropdown-selected">
+                            <span>Tất cả năm</span>
+                            <span class="arrow"></span>
+                        </div>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-item active" data-value="all">Tất cả năm</div>
+                        </div>
+                    </div>
+
+                    <div class="custom-dropdown" id="dropdown-topic">
+                        <div class="dropdown-selected">
+                            <span>Tất cả chủ đề</span>
+                            <span class="arrow"></span>
+                        </div>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-item active" data-value="all">Tất cả chủ đề</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="graph-viewport">
+                <svg id="network-graph"></svg>
+            </div>
+
+            <div class="legend-bar">
+                <div class="legend-items">
+                    <div class="legend-item">
+                        <span class="dot author-dot"></span>
+                        Author
+                    </div>
+                    <div class="legend-item">
+                        <span class="dot country-dot"></span>
+                        Degree centrality
+                    </div>
+                    <div class="legend-item">
+                        <span class="dot institution-dot"></span>
+                        Betweenness
+                    </div>
+                    <div class="legend-item">
+                        <span class="dot pagerank-dot"></span>
+                        PageRank
+                    </div>
+                    <div class="legend-item">
+                        <span class="dot closeness-dot"></span>
+                        Closeness
+                    </div>
+                </div>
+                <div class="legend-note">
+                    * Line thickness represents number of joint papers
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <script type="module" src="{{ url_for('static', filename='js/collaboration/collaboration_filter_year.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/collaboration/collaboration_filter_topic.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/collaboration/collaboration_graph.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/collaboration/collaboration.js') }}"></script>
+</body>
+</html>

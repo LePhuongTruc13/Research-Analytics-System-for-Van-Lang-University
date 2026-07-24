@@ -1,0 +1,48 @@
+topic_id,topic_name,keywords,paper_count
+0,Education & Language Learning,"students, learning, english, writing, language",268
+1,Nanomaterials & Adsorption,"adsorption, nanoparticles, surface, reaction, removal",153
+2,Wireless Communications,"performance, users, multiple, wireless, probability",140
+3,Natural Products & Antioxidants,"compounds, activity, antioxidant, extract, inhibition",123
+4,Mathematical Modeling & Fractional Equations,"solution, problem, fractional, equation, mild",93
+5,Cultural Heritage & Urban Development,"cultural, heritage, urban, city, development",110
+6,2D Electronic Materials,"monolayers, mmlmrow, monolayer, electronic, janus",112
+7,Solar Energy & Heat Transfer,"solar, flow, air, cfd, heat",71
+8,Optimization Algorithms,"power, algorithm, pso, problem, optimization",71
+9,Clinical Treatment & Patient Care,"treatment, patients, mm, patient, smile",64
+10,Water Pollution & Aquatic Environment,"water, fish, pollution, river, plastic",58
+11,Nuclear Physics & Radioactive Decay,"decay, mass, masses, rates, gauge",51
+12,Geotechnical Engineering,"rock, sand, models, soil, strength",52
+13,Consumer Behavior & Marketing,"intention, trust, brand, consumers, perceived",54
+14,Air Pollution & Emission Control,"air, emission, coastal, dust, pollution",52
+15,Machine Learning Applications,"models, machine, model, water, learning",65
+16,Graph Machine Learning,"dataset, graph, classification, detection, model",60
+17,Fuzzy Decision Making (MCDM),"fuzzy, selection, mcdm, criteria, decision",44
+18,Vietnamese Language Processing,"ng, ca, nh, cc, cu",43
+19,Sustainable Energy & Environmental Economics,"emissions, energy, environmental, economic, co2",47
+20,Cancer Biology & Immunology,"expression, immune, cells, tumor, cell",49
+21,Biodiversity & Phylogenetics,"species, vietnam, phylogenetic, new, genus",38
+22,LED Phosphor Materials,"phosphor, color, wleds, cri, red",42
+23,Cardiovascular Research,"pressure, ventricular, left, rats, renal",37
+24,Financial Markets & Corporate Finance,"financial, earnings, market, firms, listed",45
+25,Business Strategy & Entrepreneurship,"strategic, entrepreneurs, business, public, capabilities",51
+26,Structural Vibration Analysis,"vibration, plates, numerical, free, thickness",50
+27,Tourism Management & Development,"tourism, travel, development, tourists, destination",48
+28,Healthcare & Trauma Care,"care, health, trauma, treatment, symptoms",43
+29,Manufacturing & Process Optimization,"production, sigma, machining, manufacturing, 40",56
+30,Banking & Financial Technology,"banks, bank, commercial, fintech, financial",33
+31,COVID-19 & Public Health,"covid19, health, prevalence, drug, border",46
+32,Hydrology & River Basin Management,"water, basin, sediment, river, drought",30
+33,Concrete Structures & Fracture Mechanics,"beams, concrete, crack, toughness, reinforced",40
+34,Microbiology & Antimicrobial Resistance,"resistance, infection, strains, genes, tilapia",25
+35,Soil Microbiology & Fermentation,"soil, strains, sp, fermentation, bacteria",48
+36,Battery Materials & Energy Storage,"batteries, battery, anode, materials, conductivity",24
+37,Computational Materials Science,"clusters, boron, structure, atoms, calculations",50
+38,Surfactants & Colloid Chemistry,"hydrophobic, cmc, values, surfactants, micelle",31
+39,Phosphor Materials for White LEDs,"phosphor, phosphors, white, emission, nm",28
+40,Drug Delivery & Nanomedicine,"drug, delivery, nanoparticles, particles, release",33
+41,Optical Character Recognition (OCR),"ocr, character, recognition, question, bert",22
+42,Green Innovation & Corporate Sustainability,"green, csr, innovation, construction, leadership",39
+43,Functional Analysis & Operator Theory,"spaces, operators, sufficient, central, mmath",17
+44,International Trade & Economic Growth,"trade, economic, growth, fdi, openness",31
+45,Human Resource Management,"employee, job, engagement, staff, lecturers",32
+46,Human Resource Management,"clustering, algorithm, clusters, fuzzy, series",22

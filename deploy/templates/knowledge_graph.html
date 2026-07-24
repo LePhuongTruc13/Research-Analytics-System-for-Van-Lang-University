@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Graph Explorer</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/knowledge_graph.css') }}">
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/header.css') }}">
+</head>
+<body>
+{% include 'header.html' %}
+<div class="knowledge-page">
+    <div class="kg-container">
+        <div class="sidebar-left">
+            <h2>Knowledge Graph Explorer</h2>
+            <p class="subtitle">Nhấp vào một tác giả để khám phá</p>
+            
+            <div class="search-box">
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.602 10.602Z" />
+                </svg>
+                <input id="author-search" type="text" placeholder="Tìm kiếm tác giả...">
+            </div>
+
+            <div id="author-list" class="author-list">
+                
+            </div>
+        </div>
+
+        <div class="main-graph-container">
+            <div id="network-graph"></div>
+            
+            <div class="legend">
+                <div class="legend-item"><span class="dot author-dot"></span> Author</div>
+                <div class="legend-item"><span class="dot paper-dot"></span> Paper</div>
+                <div class="legend-item"><span class="dot topic-dot"></span> Topic</div>
+                <div class="legend-item"><span class="dot inst-dot"></span> Institution</div>
+            </div>
+        </div>
+
+        <div class="sidebar-right">
+            <h2>Thông tin chi tiết</h2>
+            <div id="node-placeholder" class="node-placeholder">
+
+                <div class="placeholder-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <h3>Chọn một nút để xem chi tiết</h3>
+
+                <p>
+                    Nhấp vào bài báo, chủ đề, tác giả hoặc
+                    tổ chức trên đồ thị để khám phá
+                    thông tin liên quan.
+                </p>
+
+            </div>
+
+        <div id="node-detail-content" style="display:none;">    
+           <div class="paper-meta">
+                <span class="badge-paper"></span>
+                <span class="meta-date" style="display:none;">
+                    <svg class="calendar-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+                    </svg>
+                
+                </span>
+            </div>
+
+            <h1 class="paper-title" ></h1>
+
+            <div class="stats-box"  id="stats-box" style="display:none;">
+                <div class="stat-item">
+                    <div class="stat-value"></div>
+                    <div class="stat-label"></div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value"></div>
+                    <div class="stat-label"></div>
+                </div>
+            </div>
+
+            <div class="abstract-section" style="display:none;">
+                <h3>Abstract</h3>
+                <p></p>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Dashboard Components -->
+    <script src="{{ url_for('static', filename='js/knowledge_graph/filter_author.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/knowledge_graph/graph.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/knowledge_graph/node_detail.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/knowledge_graph/knowledge_graph.js') }}"></script>
+</body>
+</html>

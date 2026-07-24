@@ -1,0 +1,17 @@
+============================================================
+BERTopic Evaluation
+============================================================
+
+Total Papers         : 2755
+Total Topics         : 47
+
+Outlier Papers       : 14
+Outlier Ratio        : 0.51%
+
+Average Probability  : 0.5765
+
+Average Topic Size   : 58.32
+Median Topic Size    : 48.00
+
+Largest Topic        : 0 (268 papers)
+Smallest Topic       : 43 (17 papers)

@@ -1,0 +1,49 @@
+<header class="main-header">
+    <div class="logo-area">
+        <div class="vlu-logo">VLU</div>
+        <div class="brand-text">
+            <h1>VAN LANG UNIVERSITY</h1>
+            <p>RESEARCH ANALYTICS</p>
+        </div>
+    </div>
+
+    <div class="header-right">
+        <div class="lang-switch">
+            <i class="fa-solid fa-globe"></i> EN / VI
+        </div>
+        <div class="theme-toggle">
+            <i class="fa-regular fa-sun"></i>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="dashboard-title-area">
+        <div class="title-left">
+            <h2>Mission Control</h2>
+            <p>Analytics for Van Lang University research output.</p>
+        </div>
+
+        <div class="navigation-tabs">
+            <a href="{{ url_for('dashboard.index') }}" 
+            class="tab-btn {{ 'active' if active_page == 'dashboard' else '' }}">
+                <i class="fa-solid fa-table-columns"></i> Overview
+            </a>
+
+            <a href="{{ url_for('topic_discovery.index') }}" 
+            class="tab-btn {{ 'active' if active_page == 'topic_discovery' else '' }}">
+                <i class="fa-solid fa-hashtag"></i> Topic Discovery
+            </a>
+
+            <a href="{{ url_for('collaboration.index') }}" 
+            class="tab-btn {{ 'active' if active_page == 'collaboration' else '' }}">
+                <i class="fa-solid fa-user-group"></i> Collaboration
+            </a>
+
+            <a href="{{ url_for('knowledge_graph.index') }}" 
+            class="tab-btn {{ 'active' if active_page == 'knowledge_graph' else '' }}">
+                <i class="fa-solid fa-diagram-project"></i> Knowledge Graph
+            </a>
+        </div>
+    </div>
+</div>

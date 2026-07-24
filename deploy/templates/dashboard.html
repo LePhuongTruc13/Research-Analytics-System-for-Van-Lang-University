@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLU Research Analytics - Mission Control</title>
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/dashboard.css') }}">
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/header.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    {% include 'header.html' %}
+    <main class="container">
+        <section class="metrics-grid">
+            <div class="card metric-card">
+                <div class="icon-wrapper red-text"><i class="fa-regular fa-file-lines"></i></div>
+                <div class="metric-label">TOTAL PAPERS</div>
+                <div id="total_papers" class="metric-value">0</div>
+            </div>
+            <div class="card metric-card">
+                <div class="icon-wrapper blue-text"><i class="fa-solid fa-user-graduate"></i></div>
+                <div class="metric-label">TOTAL AUTHORS</div>
+                <div id="total_authors" class="metric-value">0</div>
+            </div>
+            <div class="card metric-card">
+                <div class="icon-wrapper green-text"><i class="fa-solid fa-quote-right"></i></div>
+                <div class="metric-label">TOTAL CITATIONS</div>
+                <div id="total_citations" class="metric-value">0</div>
+            </div>
+            <div class="card metric-card">
+                <div class="icon-wrapper orange-text"><i class="fa-solid fa-network-wired"></i></div>
+                <div class="metric-label">TOTAL TOPICS</div>
+                <div id="total_topics" class="metric-value">0</div>
+            </div>
+            <div class="card metric-card">
+                <div class="icon-wrapper purple-text"><i class="fa-solid fa-earth-americas"></i></div>
+                <div class="metric-label">INT'L COLLABORATIONS</div>
+                <div id="international_collaboration" class="metric-value">0</div>
+            </div>
+            <div class="card metric-card">
+                <div class="icon-wrapper line-red-text"><i class="fa-solid fa-chart-line"></i></div>
+                <div class="metric-label">AVG PAGERANK</div>
+                <div id="average_pagerank" class="metric-value">0</div>
+            </div>
+        </section>
+
+        <section class="charts-grid">
+            <div class="card chart-card">
+                <h3>Publication Trend (2015–2024)</h3>
+                <div class="chart-container column-chart">
+                    <canvas id="publication_chart"></canvas>
+                </div>
+            </div>
+
+            <div class="card chart-card">
+                <h3>Citation Trend (2015–2024)</h3>
+                <div class="chart-container line-chart">
+                    <canvas id="citation_chart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="details-grid">
+            <div class="card details-card">
+                <h3>Top 5 Topics</h3>
+                <div id="top_topics_list" class="topic-list">
+                    
+                </div>
+            </div>
+
+            <div class="card details-card">
+                <h3>Top Collaborating Countries</h3>
+                <div id="country_tags" class="countries-tags">
+                   
+                </div>
+            </div>
+
+            <div class="card details-card">
+                <h3>Recent Publications</h3>
+                <div id="recent_publications" class="publications-list">
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Dashboard Components -->
+    <script src="{{ url_for('static', filename='js/dashboard/dashboard_cards.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/dashboard/dashboard_charts.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/dashboard/dashboard_recent.js') }}"></script>
+
+    <!-- Main Dashboard -->
+    <script src="{{ url_for('static', filename='js/dashboard/dashboard.js') }}"></script>
+</body>
+</html>

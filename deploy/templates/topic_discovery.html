@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOPIC DISCOVERY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/topic_discovery.css') }}">
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/header.css') }}">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    {% include 'header.html' %}
+    <div class="dashboard-container">
+        
+        <aside class="sidebar">
+            <h2 class="sidebar-title"><span>#</span> TOPIC DISCOVERY</h2>
+            
+            <div class="search-box">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input id="topic_search" type="text" placeholder="Tìm kiếm chủ đề...">
+            </div>
+
+            <div id="topic_list" class="tag-cloud">
+                
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <section class="kpi-row">
+                <div class="kpi-card">
+                    <p class="kpi-label">PAPERS</p>
+                    <p id="topic_papers" class="kpi-value">0</p>
+                </div>
+                <div class="kpi-card">
+                    <p class="kpi-label">AUTHORS</p>
+                    <p id="topic_authors" class="kpi-value">0</p>
+                </div>
+                <div class="kpi-card">
+                    <p class="kpi-label">CITATIONS</p>
+                    <p id="topic_citations" class="kpi-value">0</p>
+                </div>
+                <div class="kpi-card">
+                    <p class="kpi-label">AVG PAGERANK</p>
+                    <p id="topic_pagerank" class="kpi-value">0</p>
+                </div>
+            </section>
+
+            <section class="charts-row">
+                
+                <div class="chart-card">
+                    <h3>Publication Trend</h3>
+                    <div class="mock-chart">
+                        <div id="publication_yaxis" class="y-axis">
+                        </div>
+                        <div class="chart-area">
+                            <div class="grid-line" style="bottom: 0%;"></div>
+                            <div class="grid-line" style="bottom: 25%;"></div>
+                            <div class="grid-line" style="bottom: 50%;"></div>
+                            <div class="grid-line" style="bottom: 75%;"></div>
+                            <div class="grid-line" style="bottom: 100%;"></div>
+                            
+                            <svg 
+                                id="publication_svg"
+                                class="line-graph" 
+                                viewBox="0 0 100 50" 
+                                preserveAspectRatio="none">
+
+                                <path
+                                    id="publication_path"
+                                    fill="none"
+                                    stroke="#d32f2f"
+                                    stroke-width="0.8">
+                                </path>
+                            </svg>
+
+                            <div 
+                                id="publication_dots" 
+                                class="chart-dots">
+                            </div>
+                            <div id="publication_tooltip" class="chart-tooltip"></div>
+                        </div>
+                        <div id="publication_xaxis" class="x-axis">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="authors-card">
+                    <h3 id="top_authors_title">Top Authors</h3>
+                    <div id="top_authors_list" class="authors-list">
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="keywords-card">
+                <h3>Top Keywords</h3>
+                <div id="topic_keywords" class="word-cloud">
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Dashboard Components -->
+    <script src="{{ url_for('static', filename='js/topic_discovery/topic_discovery_cards.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/topic_discovery/topic_discovery_chart.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/topic_discovery/topic_discovery_authors.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/topic_discovery/topic_discovery_keywords.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/topic_discovery/topic_discovery_search.js') }}"></script>
+    
+    <!-- Main Dashboard -->
+    <script src="{{ url_for('static', filename='js/topic_discovery/topic_discovery.js') }}"></script>    
+</body>
+</html>

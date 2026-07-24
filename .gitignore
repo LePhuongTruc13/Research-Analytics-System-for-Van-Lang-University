@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual Environment
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Environment Variables
+.env
+
+# Cache
+.pytest_cache/
+
+# Logs
+*.log
+
+# ==========================================================
+# Generated Results — ignore all, except files app cần đọc
+# lúc runtime (production)
+# ==========================================================
+results/*
+!results/bertopic/
+!results/bertopic/topics_update.csv
+
+# ==========================================================
+# Trained Models — ignore all, except model app cần load
+# lúc runtime (nếu có)
+# ==========================================================
+saved_models/*
+!saved_models/.gitkeep
